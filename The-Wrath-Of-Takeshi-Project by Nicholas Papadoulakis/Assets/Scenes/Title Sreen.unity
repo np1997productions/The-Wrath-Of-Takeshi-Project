@@ -356,7 +356,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myButton: {fileID: 288941045}
   appearanceDelay: 4
-  disappearanceDelay: 20
+  disappearanceDelay: 25
   nextScene: Main Menu
 --- !u!1 &471947047
 GameObject:
