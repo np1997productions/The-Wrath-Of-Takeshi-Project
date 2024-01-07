@@ -476,7 +476,7 @@ MonoBehaviour:
   myButton: {fileID: 893970102}
   appearanceDelay: 4
   disappearanceDelay: 25
-  nextScene: Title Screen Greek
+  nextScene: Main Menu Greek
 --- !u!1 &1039467071
 GameObject:
   m_ObjectHideFlags: 0
