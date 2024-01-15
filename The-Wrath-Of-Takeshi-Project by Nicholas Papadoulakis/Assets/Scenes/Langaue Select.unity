@@ -998,6 +998,7 @@ MonoBehaviour:
   - {fileID: 1786828875}
   - {fileID: 789945034}
   fadingText: {fileID: 0}
+  buttonClickSound: {fileID: 8300000, guid: 24204a1b3d75bf64cb3d55d94cfe6b37, type: 3}
 --- !u!1 &1488973186
 GameObject:
   m_ObjectHideFlags: 0
@@ -1287,3 +1288,4 @@ MonoBehaviour:
   - {fileID: 1291315991}
   - {fileID: 1786828875}
   fadingText: {fileID: 0}
+  buttonClickSound: {fileID: 8300000, guid: 24204a1b3d75bf64cb3d55d94cfe6b37, type: 3}

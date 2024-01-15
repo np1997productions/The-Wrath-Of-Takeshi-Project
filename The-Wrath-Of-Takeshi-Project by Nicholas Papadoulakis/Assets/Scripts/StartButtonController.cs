@@ -18,7 +18,7 @@ public class StartButtonController : MonoBehaviour
         Invoke("ShowButton", appearanceDelay);
         Invoke("HideButton", disappearanceDelay);
 
-        audioSource = GetComponent<AudioSource>(); // Add this line
+        audioSource = gameObject.AddComponent<AudioSource>(); // Add this line to add AudioSource component
     }
 
     void ShowButton()
@@ -33,8 +33,8 @@ public class StartButtonController : MonoBehaviour
 
     public void OnButtonClick()
     {
+        PlayButtonClickSound(); // Play sound before loading the scene
         SceneManager.LoadScene(nextScene);
-        PlayButtonClickSound(); // Add this line
     }
 
     void PlayButtonClickSound()
