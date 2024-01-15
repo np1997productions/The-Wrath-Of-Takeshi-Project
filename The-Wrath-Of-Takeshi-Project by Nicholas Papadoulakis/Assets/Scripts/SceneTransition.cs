@@ -10,13 +10,9 @@ public class SceneTransition : MonoBehaviour
     public Image[] fadePanels;
     public Text fadingText;
 
-
-  
-
     public void LoadNextScene()
     {
         StartCoroutine(FadeOutAndLoad());
-
     }
 
     IEnumerator FadeOutAndLoad()
@@ -41,5 +37,4 @@ public class SceneTransition : MonoBehaviour
 
         SceneManager.LoadScene(nextSceneName);
     }
-}
 

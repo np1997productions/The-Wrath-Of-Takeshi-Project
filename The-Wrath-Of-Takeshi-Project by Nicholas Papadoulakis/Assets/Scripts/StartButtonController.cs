@@ -9,7 +9,6 @@ public class StartButtonController : MonoBehaviour
     public float disappearanceDelay = 20f;
     public string nextScene = "NextScene";
 
-
     void Start()
     {
         myButton.gameObject.SetActive(false); // Ensure the button is initially hidden
