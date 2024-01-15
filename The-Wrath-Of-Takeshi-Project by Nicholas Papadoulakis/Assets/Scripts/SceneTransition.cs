@@ -9,15 +9,31 @@ public class SceneTransition : MonoBehaviour
     public float fadeDuration = 5f;
     public Image[] fadePanels;
     public Text fadingText;
+    public AudioClip buttonClickSound; // Add this line
+    private AudioSource audioSource; // Add this line
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>(); // Add this line
+    }
 
     public void LoadNextScene()
     {
         StartCoroutine(FadeOutAndLoad());
+        PlayButtonClickSound(); // Add this line
+    }
+
+    void PlayButtonClickSound()
+    {
+        if (audioSource != null && buttonClickSound != null)
+        {
+            audioSource.PlayOneShot(buttonClickSound);
+        }
     }
 
     IEnumerator FadeOutAndLoad()
     {
-        float timer = 5f;
+        float timer = 0f; // Change initialization from 5f to 0f
 
         while (timer < fadeDuration)
         {
@@ -38,3 +54,4 @@ public class SceneTransition : MonoBehaviour
         SceneManager.LoadScene(nextSceneName);
     }
 }
+
