@@ -8,8 +8,7 @@ public class StartButtonController : MonoBehaviour
     public float appearanceDelay = 4f;
     public float disappearanceDelay = 20f;
     public string nextScene = "NextScene";
-    public AudioClip buttonClickSound; // Add this line
-    private AudioSource audioSource; // Add this line
+
 
     void Start()
     {
@@ -17,8 +16,6 @@ public class StartButtonController : MonoBehaviour
 
         Invoke("ShowButton", appearanceDelay);
         Invoke("HideButton", disappearanceDelay);
-
-        audioSource = gameObject.AddComponent<AudioSource>(); // Add this line to add AudioSource component
     }
 
     void ShowButton()
@@ -33,16 +30,7 @@ public class StartButtonController : MonoBehaviour
 
     public void OnButtonClick()
     {
-        PlayButtonClickSound(); // Play sound before loading the scene
         SceneManager.LoadScene(nextScene);
-    }
-
-    void PlayButtonClickSound()
-    {
-        if (audioSource != null && buttonClickSound != null)
-        {
-            audioSource.PlayOneShot(buttonClickSound);
-        }
     }
 }
 
